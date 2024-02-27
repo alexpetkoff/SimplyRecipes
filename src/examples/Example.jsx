@@ -22,6 +22,7 @@ const Example = () => {
             }
         }
     `);
+
     return (
         <div>
             <h2>{data.site.siteMetadata.person.name}</h2>
