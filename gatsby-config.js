@@ -8,6 +8,11 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+
 module.exports = {
   siteMetadata: {
     title: "Simply Recipes",
@@ -32,6 +37,13 @@ module.exports = {
           name: `images`,
           // Path to the directory
           path: `${__dirname}/src/assets/`,
+        },
+      },
+      {
+        resolve: `gatsby-source-contentful`,
+        options: {
+          spaceId: `cvqx46h7snav`,
+          accessToken: process.env.CONTENTFUL_API_KEY,
         },
       },
     ],
