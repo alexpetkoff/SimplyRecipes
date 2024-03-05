@@ -30,11 +30,10 @@ const AllRecipes = () => {
     const recipes = data.allContentfulRecipe.nodes;
 
     return (
-        <div>
-            <h4>all recipes</h4>
+        <section className="recipes-container">
             <TagList recipes={recipes} />
             <RecipesList recipes={recipes} />
-        </div>
+        </section>
     );
 };
 
