@@ -23,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 context: {
                     tag: tag
                 }
-            })
+            });
         })
     });
 };
