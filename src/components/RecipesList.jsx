@@ -13,6 +13,7 @@ const RecipesList = ({ recipes = [] }) => {
                 const slug = slugify(title, {
                     lower: true,
                 });
+
                 return (
                     <Link to={`/${slug}`} key={id} className="recipe">
                         <GatsbyImage
